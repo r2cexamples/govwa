@@ -50,6 +50,7 @@ func CheckDatabase() (bool, error) {
 		log.Printf("Connection Error %s ", err.Error())
 	}
 
+	/* Table Users exists? */
 	const (
 		checksql = `SELECT 1  FROM Users limit 1` //this will check if Table dbname.Users exist otherways will redirect to setup page
 	)
