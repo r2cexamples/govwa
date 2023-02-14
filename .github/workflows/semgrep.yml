@@ -9,7 +9,7 @@ on:
     branches: ["master", "main"]
   # Schedule the CI job (this method uses cron syntax):
   schedule:
-    - cron: '20 17 * * *' # Sets Semgrep to scan every day at 17:20 UTC.
+    - cron: '20 14 * * *' # Sets Semgrep to scan every day at 17:20 UTC.
     # It is recommended to change the schedule to a random time.
 
 jobs:
@@ -36,3 +36,4 @@ jobs:
           # Generate a token from Semgrep App > Settings
           # and add it to your GitHub secrets.
           SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
+          SEMGREP_REPO_NAME: ${{ vars.SEMGREP_REPO_NAME }}
